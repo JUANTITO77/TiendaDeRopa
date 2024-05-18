@@ -10,6 +10,9 @@
     box-sizing: border-box;
     user-select: none;
 }   
+body{
+    position: relative;
+}
 header{
     width: 100vw;
     height: 70px;
@@ -106,6 +109,11 @@ header{
                 outline: none;
                 font-size: 15px;
             }
+            @media screen and (max-width: 700px) {
+                input{
+                    display: none;
+                }
+            }
         }
         .BoxSearch:hover{
             ion-icon{
@@ -113,7 +121,61 @@ header{
             }
         }
     }
+    @media screen and (max-width: 700px) {
+        .BotonMenu,
+        .BotonCerrar{
+            display: block;
+        }
+        
+        .menu{
+            opacity: 0;
+            visibility: hidden;
+        }
+        header{
+            position: relative;
+        }
+        .menu{
+            position: absolute;
+            width: 50%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 70px;
+            right:0;
+            background-color: #aaa;
+            
+        }
+        .menu.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .miBoton{
+            position: relative;
+            width: 100%;
+            .BotonCerrar{
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+    
 }
+.BotonMenu,
+.BotonCerrar{
+    border: none;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    display: none;
+    ion-icon{
+        color: #000;
+        font-size: 35px;
+    }
+}
+
 
 
 
