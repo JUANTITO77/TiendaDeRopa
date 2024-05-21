@@ -12,6 +12,7 @@
 }   
 body{
     position: relative;
+    overflow-x: hidden;
 }
 header{
     width: 100vw;
@@ -33,7 +34,7 @@ header{
         align-items: center;
         justify-content: center;
         img{
-            height: 100px;
+            height: 80px;
             position: absolute;
         }
     }
@@ -51,9 +52,13 @@ header{
             align-items: center;
             justify-content: space-evenly;
             cursor: pointer;
-            span{
-                font-size: 18px;
-                color: #555;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    font-size: 18px;
+                    color: #555;
+                }
             }
         }
         .submenu:hover{
@@ -136,6 +141,11 @@ header{
         }
         header{
             position: relative;
+            
+            
+        }
+        #MiLogo{
+            height: 40px;
         }
         .menu{
             position: absolute;
@@ -147,7 +157,7 @@ header{
             justify-content: center;
             top: 70px;
             right:0;
-            background-color: #aaa;
+            background-color: #eee;
             
         }
         .menu.visible {
@@ -179,16 +189,14 @@ header{
     }
 }
 
-.container{
-    width: 100%;
-    overflow: hidden;
-}
-
 .slider-contenedor{
     width: 100%;
     display: flex;
     height: 750px;
-
+}
+.container{
+    width: 100%;
+    
 }
 .contenido-slider{
     width: 100%;
@@ -223,19 +231,21 @@ header{
 
 .cards{
     width: 300px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ddd;
-    margin: 20px 50px;
+    background-color: #fefefe;
+    margin: 20px 20px;
+    box-shadow: 0 0 5px 2px #ccc;
 
     img{
         width: 100%;
-        height: 400px;
+        height: 300px;
+        object-fit: cover;
     }
     span:nth-child(2){
         color: #000;
@@ -258,6 +268,8 @@ header{
 }
 .Subtitulo{
     margin: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -267,7 +279,11 @@ header{
         font-size: 35px;
     }
     hr{
-        width: 40%;
+        width: 70%;
+        height: 1px;
+        border: none;
+        background-color: rgb(253, 94, 240);
+        box-shadow: 0 0 5px 1px #f0bce9;
     }
 }
 .GroupCards{
@@ -276,10 +292,134 @@ header{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 
+.footer{
+    box-shadow: 0 -2px 4px 2px #777;
+    margin-top: 50px;
+    width: 100%;
+    height: 500px;
+    background-color: #2B2F35;
+    .superior{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: row;
+        .logo{
+            display: flex;
+            width: 30%;
+            padding: 30px;
+        }
+        .marcas{
+            display: flex;
+            width: 35%;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: start;
+            padding-left: 100px;
+            a{
+                text-decoration: none;
+                color: #aaa;
+            }
+        }
+        .AtencionCliente{
+            display: flex;
+            width: 35%;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: start;
+            padding-left: 50px;
+            a{
+                text-decoration: none;
+                color: #aaa;
+            }
+        }
+        
+    }
+    
 
+
+
+
+    h3{
+        margin-top: 10px;
+        color: #bbb;
+    }
+    h2{
+        color: #fff;
+        font-size: 25px;
+    }
+    .inferior{
+        width: 100%;
+        height: 150px;
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .logoArequipa{
+            width: 30%;
+        }
+        .direccion{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .logoPeru{
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            margin-left: 100px;
+            width: 110px;
+        }
+    }
+    
+    @media screen and (max-width:700px){
+        .superior{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .logo{
+                display: none;
+                width: 0;
+            }
+            .marcas{
+                padding: 10px;
+            }
+            .AtencionCliente{
+                padding: 0;
+            }
+        }
+        .inferior{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            img{
+                margin: 0;
+                width: 70px;
+            }
+            .direccion{
+                h2{
+                    font-size: 18px;
+                }
+                h3{
+                    font-size: 10px;
+                }
+            }
+
+        }
+
+    }
+    
+    
+}
 
 
 
